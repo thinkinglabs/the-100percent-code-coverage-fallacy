@@ -10,10 +10,14 @@ public class FizzBuzz {
         if (isDivisibleBy3(value)) {
             return "Fizz";
         }
-        if (value % 5 == 0) {
+        if (isDivisibleBy5(value)) {
             return "Buzz";
         }
         return Integer.toString(value);
+    }
+
+    private boolean isDivisibleBy5(int value) {
+        return value % 5 == 0;
     }
 
     private boolean isDivisibleBy3(int value) {
