@@ -1,8 +1,12 @@
+plugins {
+  id 'jacoco'
+  id 'com.github.kt3k.coveralls' version '2.6.3'
+}
+
 group 'io.thinkinglabs'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
 
