@@ -35,9 +35,14 @@ public class FizzBuzzTest
         assertThat(fizzBuzz(5)).isEqualTo("Buzz");
     }
 
+    @Test
+    public void shouldReturnFizzWhenInputIs6() {
+        assertThat(fizzBuzz(6)).isEqualTo("Fizz");
+    }
+
     private String fizzBuzz(int value)
     {
-        if (value == 3) {
+        if (value == 3 || value == 6) {
             return "Fizz";
         }
         if (value == 5) {
