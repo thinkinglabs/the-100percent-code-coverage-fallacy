@@ -76,4 +76,13 @@ public class FizzBuzzTest
     public void shouldReturnFizzBuzzWhenInputIs15() {
         assertThat(fizzBuzz.print(15)).isEqualTo("FizzBuzz");
     }
+
+    @Test
+    public void shouldReturnFizzBuzzWhenDivisibleBy3And5() {
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(fizzBuzz.print(30)).isEqualTo("FizzBuzz");
+        softly.assertThat(fizzBuzz.print(45)).isEqualTo("FizzBuzz");
+        softly.assertThat(fizzBuzz.print(60)).isEqualTo("FizzBuzz");
+        softly.assertAll();
+    }
 }

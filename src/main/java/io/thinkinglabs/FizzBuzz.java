@@ -1,20 +1,21 @@
 package io.thinkinglabs;
 
 /**
- * Created by thipau on 29/08/2017.
+ * @author @tdpauw
  */
 public class FizzBuzz {
 
     public String print(int value)
     {
-        if (value == 15) {
-            return "FizzBuzz";
-        }
-        if (isDivisibleBy3(value)) {
-            return "Fizz";
-        }
-        if (isDivisibleBy5(value)) {
-            return "Buzz";
+        if (isDivisibleBy3(value) || isDivisibleBy5(value)) {
+            StringBuilder result = new StringBuilder();
+            if (isDivisibleBy3(value)) {
+                result.append("Fizz");
+            }
+            if (isDivisibleBy5(value)) {
+                result.append("Buzz");
+            }
+            return result.toString();
         }
         return Integer.toString(value);
     }
