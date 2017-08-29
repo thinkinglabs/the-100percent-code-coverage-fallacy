@@ -71,4 +71,9 @@ public class FizzBuzzTest
         softly.assertThat(fizzBuzz.print(40)).isEqualTo("Buzz");
         softly.assertAll();
     }
+
+    @Test
+    public void shouldReturnFizzBuzzWhenInputIs15() {
+        assertThat(fizzBuzz.print(15)).isEqualTo("FizzBuzz");
+    }
 }

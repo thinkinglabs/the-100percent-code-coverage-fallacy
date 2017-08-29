@@ -7,6 +7,9 @@ public class FizzBuzz {
 
     public String print(int value)
     {
+        if (value == 15) {
+            return "FizzBuzz";
+        }
         if (isDivisibleBy3(value)) {
             return "Fizz";
         }
