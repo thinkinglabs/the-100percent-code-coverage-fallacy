@@ -7,7 +7,7 @@ public class FizzBuzz {
 
     public String print(int value)
     {
-        if (isDivisibleBy3(value) || isDivisibleBy5(value)) {
+        if (isDivisibleBy3Or5(value)) {
             StringBuilder result = new StringBuilder();
             if (isDivisibleBy3(value)) {
                 result.append("Fizz");
@@ -18,6 +18,10 @@ public class FizzBuzz {
             return result.toString();
         }
         return Integer.toString(value);
+    }
+
+    private boolean isDivisibleBy3Or5(int value) {
+        return isDivisibleBy3(value) || isDivisibleBy5(value);
     }
 
     private boolean isDivisibleBy5(int value) {
