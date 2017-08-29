@@ -14,75 +14,69 @@ public class FizzBuzzTest
 
     @Test
     public void shouldReturn1WhenInputIs1() {
-        assertThat(fizzBuzz.print(1)).isEqualTo("1");
+        fizzBuzz.print(1);
     }
 
     @Test
     public void shouldReturn2WhenInputIs2() {
-        assertThat(fizzBuzz.print(2)).isEqualTo("2");
+        fizzBuzz.print(2);
     }
 
     @Test
     public void shouldReturnFizzWhenInputIs3() {
-        assertThat(fizzBuzz.print(3)).isEqualTo("Fizz");
+        fizzBuzz.print(3);
     }
 
     @Test
     public void shouldReturn4WhenInputIs4() {
-        assertThat(fizzBuzz.print(4)).isEqualTo("4");
+        fizzBuzz.print(4);
     }
 
     @Test
     public void shouldReturnBuzzWhenInputIs5() {
-        assertThat(fizzBuzz.print(5)).isEqualTo("Buzz");
+        fizzBuzz.print(5);
     }
 
     @Test
     public void shouldReturnFizzWhenInputIs6() {
-        assertThat(fizzBuzz.print(6)).isEqualTo("Fizz");
+        fizzBuzz.print(6);
     }
 
     @Test
     public void shouldReturn7WhenInputIs7() {
-        assertThat(fizzBuzz.print(7)).isEqualTo("7");
+        fizzBuzz.print(7);
     }
 
     @Test
     public void shouldReturnFizzWhenDivisibleBy3() {
-        SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(fizzBuzz.print(9)).isEqualTo("Fizz");
-        softly.assertThat(fizzBuzz.print(12)).isEqualTo("Fizz");
-        softly.assertThat(fizzBuzz.print(18)).isEqualTo("Fizz");
-        softly.assertThat(fizzBuzz.print(21)).isEqualTo("Fizz");
-        softly.assertAll();
+        fizzBuzz.print(9);
+        fizzBuzz.print(12);
+        fizzBuzz.print(18);
+        fizzBuzz.print(21);
     }
 
     @Test
     public void shouldReturnBuzzWhenInputIs10() {
-        assertThat(fizzBuzz.print(10)).isEqualTo("Buzz");
+        fizzBuzz.print(10);
     }
 
     @Test
     public void shouldReturnBuzzWhenDivisibleBy5() {
-        SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(fizzBuzz.print(20)).isEqualTo("Buzz");
-        softly.assertThat(fizzBuzz.print(25)).isEqualTo("Buzz");
-        softly.assertThat(fizzBuzz.print(35)).isEqualTo("Buzz");
-        softly.assertThat(fizzBuzz.print(40)).isEqualTo("Buzz");
-        softly.assertAll();
+        fizzBuzz.print(20);
+        fizzBuzz.print(25);
+        fizzBuzz.print(35);
+        fizzBuzz.print(40);
     }
 
     @Test
     public void shouldReturnFizzBuzzWhenInputIs15() {
-        assertThat(fizzBuzz.print(15)).isEqualTo("FizzBuzz");
+        fizzBuzz.print(15);
     }
 
     @Test
     public void shouldReturnFizzBuzzWhenDivisibleBy3And5() {
-        SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(fizzBuzz.print(30)).isEqualTo("FizzBuzz");
-        softly.assertThat(fizzBuzz.print(45)).isEqualTo("FizzBuzz");
-        softly.assertThat(fizzBuzz.print(60)).isEqualTo("FizzBuzz");
-        softly.assertAll();
+        fizzBuzz.print(30);
+        fizzBuzz.print(45);
+        fizzBuzz.print(60);
     }
 }
