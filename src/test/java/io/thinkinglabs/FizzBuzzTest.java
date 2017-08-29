@@ -58,12 +58,16 @@ public class FizzBuzzTest
 
     public String fizzBuzz(int value)
     {
-        if (value % 3 == 0) {
+        if (isDivisibleBy3(value)) {
             return "Fizz";
         }
         if (value == 5) {
             return "Buzz";
         }
         return Integer.toString(value);
+    }
+
+    private boolean isDivisibleBy3(int value) {
+        return value % 3 == 0;
     }
 }
