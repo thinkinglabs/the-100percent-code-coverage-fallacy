@@ -25,6 +25,11 @@ public class FizzBuzzTest
         assertThat(fizzBuzz(3)).isEqualTo("Fizz");
     }
 
+    @Test
+    public void shouldReturn4WhenInputIs4() {
+        assertThat(fizzBuzz(4)).isEqualTo("4");
+    }
+
     private String fizzBuzz(int value)
     {
         if (value == 3) {
