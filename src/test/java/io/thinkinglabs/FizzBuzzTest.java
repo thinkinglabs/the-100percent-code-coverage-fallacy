@@ -1,6 +1,7 @@
 package io.thinkinglabs;
 
 import org.assertj.core.api.IntegerAssert;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -40,9 +41,24 @@ public class FizzBuzzTest
         assertThat(fizzBuzz(6)).isEqualTo("Fizz");
     }
 
-    private String fizzBuzz(int value)
+    @Test
+    public void shouldReturn7WhenInputIs7() {
+        assertThat(fizzBuzz(7)).isEqualTo("7");
+    }
+
+    @Test
+    public void shouldReturnFizzWhenDivisibleBy3() {
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(fizzBuzz(9)).isEqualTo("Fizz");
+        softly.assertThat(fizzBuzz(12)).isEqualTo("Fizz");
+        softly.assertThat(fizzBuzz(18)).isEqualTo("Fizz");
+        softly.assertThat(fizzBuzz(21)).isEqualTo("Fizz");
+        softly.assertAll();
+    }
+
+    public String fizzBuzz(int value)
     {
-        if (value == 3 || value == 6) {
+        if (value % 3 == 0) {
             return "Fizz";
         }
         if (value == 5) {
