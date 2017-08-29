@@ -2,6 +2,7 @@ group 'io.thinkinglabs'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
 
@@ -11,5 +12,11 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.11'
-    testCompile 'org.assertj:assertj-core:3.8.0'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
