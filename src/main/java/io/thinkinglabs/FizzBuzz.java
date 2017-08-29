@@ -10,7 +10,7 @@ public class FizzBuzz {
         if (isDivisibleBy3(value)) {
             return "Fizz";
         }
-        if (value == 5 || value == 10) {
+        if (value % 5 == 0) {
             return "Buzz";
         }
         return Integer.toString(value);
