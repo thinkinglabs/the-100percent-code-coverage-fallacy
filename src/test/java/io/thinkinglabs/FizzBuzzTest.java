@@ -11,6 +11,11 @@ public class FizzBuzzTest
 {
     @Test
     public void shouldReturn1WhenInputIs1() {
-        assertThat(1).isEqualTo(1);
+        assertThat(fizzBuzz()).isEqualTo(1);
+    }
+
+    private int fizzBuzz()
+    {
+        return 1;
     }
 }
