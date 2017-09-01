@@ -18,6 +18,15 @@ Which is a perfect example of [Goodhart's Law](https://en.wikipedia.org/wiki/Goo
 
 _Any metric looses it value whenever it becomes a target._
 
+## The System
+The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/).
+
+I grew the system using TDD. After which I removed all assertions from the test class leaving all existing test cases in place.
+
+To better make my point I should remove as much test cases as necessary to still have 100% code coverage. Now there are lots of duplicates.
+
+At this stage, it is now possible to change the implementation without having any failing tests. Let's say we now want to output "_Fizz_" when the number is divisible by 2 (instead of 3).
+
 ## Test Coverage
 The test coverage is measured using [JaCoCo](http://www.eclemma.org/jacoco/).
 
