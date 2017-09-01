@@ -1,6 +1,7 @@
 plugins {
   id 'jacoco'
   id 'com.github.kt3k.coveralls' version '2.6.3'
+  id 'info.solidsoft.pitest' version '1.1.11'
 }
 
 group 'io.thinkinglabs'
@@ -23,4 +24,8 @@ jacocoTestReport {
         xml.enabled = true // coveralls plugin depends on xml format report
         html.enabled = true
     }
+}
+
+pitest {
+  mutationThreshold = 100
 }

@@ -2,7 +2,7 @@
 
 What is good code coverage ... Is it 50%, 80%, 100% ? Well in fact it doesn't matter. Code coverage alone doesn't say anything useful about how well the system is tested.
 
-And that is the point I wanted to make with this repo. Create an example of a system having 100% code coverage with 0 valuable tests. When you have a look at [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java), you'll see there are absolutely no assertions. So all lines are covered but nothing useful is said in the assertions.
+This is the point I wanted to make with this repo. Create an example of a system having 100% code coverage with 0 valuable tests. When you have a look at [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java), you'll see there are absolutely no assertions. So all lines are covered but nothing useful is said in the assertions.
 
 Recently I heard the following story:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Team has a 30% code coverage. After running mutation tests, drops to 3% coverage.<br>When a metric becomes a target you fool it. Goodhart&#39;s Law</p>&mdash; Thierry de Pauw (@tdpauw) <a href="https://twitter.com/tdpauw/status/890112157450481664">July 26, 2017</a></blockquote>
@@ -18,8 +18,24 @@ Which is a perfect example of [Goodhart's Law](https://en.wikipedia.org/wiki/Goo
 
 _Any metric looses it value whenever it becomes a target._
 
-## Test Coverage report
-To obtain a test coverage report run the following command:
+## Test Coverage
+The test coverage is measured using [JaCoCo](http://www.eclemma.org/jacoco/).
+
+To obtain a test coverage report:
 ```
 $ ./gradlew test jacocoTestReport
 ```
+
+The coverage report can be found at `build/reports/jacoco/test/html/index.html`
+
+## Mutation Testing
+The mutation testing is done using [PIT](http://pitest.org/).
+
+To obtain a mutation testing report:
+```
+$ ./gradlew pitest
+```
+
+The build will fail because not 100% of the mutations were killed. In the report you will see that the test coverage dropped to 0%.
+
+The mutation testing report can be found at `build/reports/pitest/YYYYMMddhhmm/index.html`
