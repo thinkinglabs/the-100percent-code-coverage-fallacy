@@ -6,12 +6,12 @@ The idea for this repository popped up when I heard the following story:
 
 Inside that organisation, having 30% test coverage was a big achievement, as most teams had no or very little test coverage. You can imagine the team was very proud. Until the day someone had the clever idea to run [mutation tests](https://en.wikipedia.org/wiki/Mutation_testing) against the code base. All of a sudden the test coverage dropped to 3%.
 
-What happened ? The team got test coverage defined by their manager as KPI. So naturally the team did whatever was possible to improve the test coverage using low quality testing.
-
+What happened ?
 > I expect a high level of coverage. Sometimes managers require one. There's a subtle difference.
 >
 > &mdash; Brian Marick
 
+The manager of the team defined test coverage as a KPI. So naturally the team did whatever was possible to improve the test coverage using low quality testing.
 This is a perfect example of [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law).
 
 > Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.
@@ -20,10 +20,11 @@ This is a perfect example of [Goodhart's Law](https://en.wikipedia.org/wiki/Good
 
 Or said differently: _Any metric looses it value whenever it becomes a target._
 
-In the past I had numerous discussions with team members on what is an acceptable [test coverage](https://martinfowler.com/bliki/TestCoverage.html) value and should we enforce this. I once encountered somebody who expected 100% test coverage from his team.
-The system was grown using TDD. After which I removed all assertions from the test class but leaving all existing test cases in place. This results in 100% code coverage. But if you run the mutation tests all mutations all mutants survive and code coverage drops to 0%.
+In the past I had numerous discussions with team members on what is an acceptable [test coverage](https://martinfowler.com/bliki/TestCoverage.html) and should we enforce this. I even once met somebody who expected 100% test coverage from his team.
 
-At this stage, it is now possible to change the implementation without having any failing tests.
+This repo show cases a system with 100% test coverage (as you can see from the coverage badge) using tests that say nothing useful (aka low value tests or low quality tests).
+
+The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java))). The system has still 100% test coverage. But when running mutation tests the test coverage drops to 0%.
 
 ## Test Coverage report
 The test coverage is measured using [JaCoCo](http://www.eclemma.org/jacoco/).
