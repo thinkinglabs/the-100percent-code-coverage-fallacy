@@ -20,7 +20,7 @@ This is a perfect example of [Goodhart's Law](https://en.wikipedia.org/wiki/Good
 
 Or said differently: _Any metric looses it value whenever it becomes a target._
 
-In the past I had numerous discussions with team members on what is an acceptable [test coverage](https://martinfowler.com/bliki/TestCoverage.html) and should we enforce this. I even once met somebody who expected 100% test coverage from his team. Good test coverage is when you are rarely scared of introducing a bug after a code change.
+In the past I had numerous discussions with team members on what is an acceptable [test coverage](https://martinfowler.com/bliki/TestCoverage.html) and should we enforce this. I even once met somebody who expected 100% test coverage from his team. Test coverage is a crappy metric. But it is a useful tool to find untested parts of your system. Good test coverage is when you are rarely scared of introducing a bug after a code change.
 
 This repo show cases a system with 100% test coverage (as you can see from the coverage badge) using tests that say nothing useful. In fact it makes use of [Assertion Free Testing](https://martinfowler.com/bliki/AssertionFreeTesting.html).
 
