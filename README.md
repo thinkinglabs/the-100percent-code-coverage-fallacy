@@ -22,9 +22,9 @@ Or said differently: _Any metric looses it value whenever it becomes a target._
 
 In the past I had numerous discussions with team members on what is an acceptable [test coverage](https://martinfowler.com/bliki/TestCoverage.html) and should we enforce this. I even once met somebody who expected 100% test coverage from his team. Good test coverage is when you are rarely scared of introducing a bug after a code change.
 
-This repo show cases a system with 100% test coverage (as you can see from the coverage badge) using tests that say nothing useful (aka low value tests or low quality tests).
+This repo show cases a system with 100% test coverage (as you can see from the coverage badge) using tests that say nothing useful. In fact it makes use of [Assertion Free Testing](https://martinfowler.com/bliki/AssertionFreeTesting.html).
 
-The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java))). The system has still 100% test coverage. But when running mutation tests the test coverage drops to 0%. This is an example of [Assertion Free Testing](https://martinfowler.com/bliki/AssertionFreeTesting.html).
+The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java))). The system has still 100% test coverage. But when running mutation tests the test coverage drops to 0%.
 
 ## Test Coverage report
 The test coverage is measured using [JaCoCo](http://www.eclemma.org/jacoco/).
