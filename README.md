@@ -1,4 +1,4 @@
-# The Fallacy of the 100% test coverage [![Build Status](https://travis-ci.org/thinkinglabs/the-100-percent-code-coverage-fallacy.svg?branch=master)](https://travis-ci.org/thinkinglabs/the-100-percent-code-coverage-fallacy) [![Coverage Status](https://coveralls.io/repos/github/thinkinglabs/the-100-percent-code-coverage-fallacy/badge.svg?branch=master)](https://coveralls.io/github/thinkinglabs/the-100-percent-code-coverage-fallacy?branch=master)
+# The Fallacy of the 100% test coverage [![Build Status](https://travis-ci.org/thinkinglabs/the-100percent-test-coverage-fallacy.svg?branch=master)](https://travis-ci.org/thinkinglabs/the-100percent-test-coverage-fallacy) [![Coverage Status](https://coveralls.io/repos/github/thinkinglabs/the-100-percent-code-coverage-fallacy/badge.svg?branch=master)](https://coveralls.io/github/thinkinglabs/the-100-percent-code-coverage-fallacy?branch=master)
 
 The idea for this repository popped up when I heard the following story:
 
