@@ -9,7 +9,8 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.8
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -28,4 +29,8 @@ jacocoTestReport {
 
 pitest {
   mutationThreshold = 100
+}
+
+task wrapper(type: Wrapper) {
+   gradleVersion = '4.10.2'
 }
