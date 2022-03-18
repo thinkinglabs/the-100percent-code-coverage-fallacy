@@ -26,6 +26,31 @@ This repo show cases a system with 100% code coverage (as you can see from the c
 
 The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java)). The system has still 100% code coverage. But when running mutation tests none of the mutations gets killed, so resulting in 0% usefulness of the tests.
 
+## Prerequisites
+
+The system requires a JVM 1.8.
+
+Installation on macos:
+
+- Install [`jenv`](https://github.com/jenv/jenv) for managing JVMs.
+
+  ```bash
+  $ brew install jenv
+  $ jenv doctor
+  [OK] No JAVA_HOME set
+  [OK] Java binaries in path are jenv shims
+  [OK] Jenv is correctly loaded
+  jenv enable-plugin export
+  # restart your shell
+  ```
+
+- Install Java8
+
+   ```bash
+   brew install --cask temurin8
+   jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/
+   ```
+
 ## Code Coverage report
 
 The code coverage is measured using [JaCoCo](http://www.eclemma.org/jacoco/).
