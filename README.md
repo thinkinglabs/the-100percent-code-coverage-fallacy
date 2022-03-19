@@ -1,10 +1,10 @@
 # the-100percent-code-coverage-fallacy [![Build Status](https://travis-ci.org/thinkinglabs/the-100percent-test-coverage-fallacy.svg?branch=master)](https://travis-ci.org/thinkinglabs/the-100percent-code-coverage-fallacy) [![Coverage Status](https://coveralls.io/repos/github/thinkinglabs/the-100-percent-code-coverage-fallacy/badge.svg?branch=master)](https://coveralls.io/github/thinkinglabs/the-100-percent-code-coverage-fallacy?branch=master)
 
-This is the companion repo for the article [The Fallacy of the 100% code coverage](https://github.com/thinkinglabs/thinkinglabs.github.io/blob/master/_drafts/the-fallacy-of-the-100%25-code-coverage.md).
+This is the companion repo for the article [The Fallacy of the 100% code coverage](https://thinkinglabs.io/articles/2022/03/19/the-fallacy-of-the-100-code-coverage.html).
 
-It show cases a system having 100% code coverage (as you can see from the coverage badge) using low-quality testing through [Assertion Free Tests](https://martinfowler.com/bliki/AssertionFreeTesting.html).
+It showcases a system having 100% code coverage (as you can see from the coverage badge) using low-quality testing through [Assertion Free Tests](https://martinfowler.com/bliki/AssertionFreeTesting.html).
 
-The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java)). The system still has 100% code coverage. But when running the mutation tests none of the mutations are killed, resulting in zero useful tests.
+The system is an implementation of the [FizzBuzz Kata](http://codingdojo.org/kata/FizzBuzz/). It was grown using TDD. Once fully implemented, I removed all assertions (see [FizzBuzzTest](./src/test/java/io/thinkinglabs/FizzBuzzTest.java)). The system still has 100% code coverage. But when running the mutation tests none of the mutations is killed, resulting in zero useful tests.
 
 | Number of Classes | Line Coverage | Mutation Coverage |
 | ------------------|---------------|-------------------|
